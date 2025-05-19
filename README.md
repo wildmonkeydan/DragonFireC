@@ -1,23 +1,5 @@
-# Raylib Setup using Premake5
-This is a template system for building cross platform raylib projects using premake. It is focused on intermediate to advanced users.
-for a simple template, please see Raylib-QuickStart
-
-  * https://github.com/raylib-extras/raylib-quickstart
-
-## Video Tutorial
-A video covering this process is here
-https://youtu.be/--gI9083QnU
-
-# Download this repository
-Download the game premake repository from 
-https://github.com/raylib-extras/game-premake/
-You can either download the zip file, or clone the repository.
-If you clone the repository, you may want to remove the stored history. Simply delete the .git directory to do this.
-
-Rename the directory whatever you want. This will be the name of your game.
-
-# Example app
-This repository is pre-populated with a simple C++ starting application that uses external headers and a static library, simply as an example of how to set them up.
+# DragonFireC
+A work in progress translation of the Atari 2600 classic Dragonfire to C/Raylib
 
 # Generate Projects
 For windows users, there are two batch files you can use depending on what compiler you are using. For linux users you can simply use a terminal.
@@ -98,16 +80,6 @@ If you need to build for a different OpenGL version than the default (OpenGL 3.3
 
 ## For OpenGLES 3.0
 --graphics=opengles3
-
-# Changing the static libs
-The example template uses a sample static lib. If you want to rename it or duplicate it, you can. Just be sure to change the link_to line in the premake5.lua file in the game folder. It needs to point the correct folder.
-
-link_to("LIB_FOLDER_NAME")
-
-Rerun premake and it will build your library for you.
-Note that by default link_to will add include dirs for your library folder and library/include. If you have other include needs you will have to add those to your premake file manually.
-
-If you do not want a static library, simply remove the link_to line from your lua script
 
 # (Optional) Get Raylib
 If you wish to use a specific version of raylib, follow the instructions below. If you want the current development version, skip this section and premake will download raylib for you.
